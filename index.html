@@ -195,7 +195,7 @@
             </p>
           </div>
           <div class="project-grid">
-            <article class="project-card featured">
+            <article class="project-card featured" data-project-id="task-1">
               <span class="project-kicker">Nhiệm vụ 1</span>
               <h3>Bài tập 1 - Bài 1: Máy tính và các thiết bị ngoại vi</h3>
               <p>
@@ -207,9 +207,12 @@
                 <li>Quy tắc đặt tên rõ ràng</li>
                 <li>Minh chứng thao tác thực tế</li>
               </ul>
-              <a class="text-link" href="docs/bao-cao-ca-nhan-1.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-1">Xem nội dung</button>
+                <a class="text-link" href="docs/bao-cao-ca-nhan-1.docx" download>Tải file Word</a>
+              </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-project-id="task-2">
               <span class="project-kicker">Nhiệm vụ 2</span>
               <h3>Bài tập 2 - Bài 2: Khai thác dữ liệu và thông tin</h3>
               <p>
@@ -217,9 +220,12 @@
                 dụng học máy trong phát hiện gian lận tài chính, có bảng tổng hợp
                 10 nguồn và danh mục tham khảo theo định dạng Harvard.
               </p>
-              <a class="text-link" href="docs/bai-tap-ca-nhan-2.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-2">Xem nội dung</button>
+                <a class="text-link" href="docs/bai-tap-ca-nhan-2.docx" download>Tải file Word</a>
+              </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-project-id="task-3">
               <span class="project-kicker">Nhiệm vụ 3</span>
               <h3>Bài tập 2 - Bài 3: Viết prompt hiệu quả cho các tác vụ học tập</h3>
               <p>
@@ -227,18 +233,24 @@
                 tác vụ học tập như tóm tắt tài liệu, giải thích khái niệm và tạo
                 câu hỏi ôn tập.
               </p>
-              <a class="text-link" href="docs/bai-tap-ca-nhan-3.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-3">Xem nội dung</button>
+                <a class="text-link" href="docs/bai-tap-ca-nhan-3.docx" download>Tải file Word</a>
+              </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-project-id="task-4">
               <span class="project-kicker">Nhiệm vụ 4</span>
               <h3>Bài tập 3 - Bài 4: Giao tiếp và hợp tác trong môi trường số</h3>
               <p>
                 Mô tả quá trình phối hợp trực tuyến, công cụ đã sử dụng và hình thức
                 minh chứng cho từng bước làm việc.
               </p>
-              <a class="text-link" href="docs/bai-tap-ca-nhan-4.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-4">Xem nội dung</button>
+                <a class="text-link" href="docs/bai-tap-ca-nhan-4.docx" download>Tải file Word</a>
+              </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-project-id="task-5">
               <span class="project-kicker">Nhiệm vụ 5</span>
               <h3>Bài tập 2 - Bài 5: Sáng tạo nội dung số</h3>
               <p>
@@ -246,9 +258,12 @@
                 bằng cách kết hợp AI tạo văn bản, AI tạo ảnh và Canva AI, có ghi
                 lại quy trình sử dụng và cách chỉnh sửa đầu ra.
               </p>
-              <a class="text-link" href="docs/bao-cao-ca-nhan-5.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-5">Xem nội dung</button>
+                <a class="text-link" href="docs/bao-cao-ca-nhan-5.docx" download>Tải file Word</a>
+              </div>
             </article>
-            <article class="project-card">
+            <article class="project-card" data-project-id="task-6">
               <span class="project-kicker">Nhiệm vụ 6</span>
               <h3>Bài tập 4 - Bài 6: An toàn và liêm chính học thuật</h3>
               <p>
@@ -256,7 +271,10 @@
                 lấy RMIT University Vietnam làm trường hợp nghiên cứu và xây dựng
                 bộ nguyên tắc cá nhân khi dùng AI.
               </p>
-              <a class="text-link" href="docs/bai-tap-ca-nhan-6.docx">Mở báo cáo Word</a>
+              <div class="project-actions">
+                <button class="detail-btn" type="button" data-project-id="task-6">Xem nội dung</button>
+                <a class="text-link" href="docs/bai-tap-ca-nhan-6.docx" download>Tải file Word</a>
+              </div>
             </article>
           </div>
           <div class="section-actions">
@@ -348,6 +366,24 @@
       <a href="#top">Về đầu trang</a>
     </footer>
 
+    <dialog class="project-dialog" id="project-dialog">
+      <div class="dialog-shell">
+        <div class="dialog-head">
+          <div>
+            <p class="eyebrow" id="dialog-label">Nhiệm vụ</p>
+            <h2 id="dialog-title">Chi tiết nhiệm vụ</h2>
+            <p id="dialog-summary"></p>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Đóng">×</button>
+        </div>
+        <div class="dialog-actions">
+          <a class="primary-btn" id="dialog-download" href="#" download>Tải file Word</a>
+        </div>
+        <div class="dialog-content" id="dialog-content"></div>
+      </div>
+    </dialog>
+
+    <script src="project-data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

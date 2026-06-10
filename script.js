@@ -88,3 +88,99 @@ if (!prefersReducedMotion) {
     }
   });
 }
+
+const projects = Array.isArray(window.projectDetails) ? window.projectDetails : [];
+const projectMap = new Map(projects.map((project) => [project.id, project]));
+const dialog = document.querySelector("#project-dialog");
+const dialogLabel = document.querySelector("#dialog-label");
+const dialogTitle = document.querySelector("#dialog-title");
+const dialogSummary = document.querySelector("#dialog-summary");
+const dialogContent = document.querySelector("#dialog-content");
+const dialogDownload = document.querySelector("#dialog-download");
+const dialogClose = document.querySelector(".dialog-close");
+
+function createTextBlock(block) {
+  const element = document.createElement(block.type === "heading" ? "h3" : "p");
+  element.textContent = block.text;
+  return element;
+}
+
+function createTableBlock(block) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "detail-table-wrap";
+
+  const table = document.createElement("table");
+  block.rows.forEach((row, rowIndex) => {
+    const tr = document.createElement("tr");
+    row.forEach((cell) => {
+      const tag = rowIndex === 0 ? "th" : "td";
+      const td = document.createElement(tag);
+      td.textContent = cell;
+      tr.appendChild(td);
+    });
+    table.appendChild(tr);
+  });
+
+  wrapper.appendChild(table);
+  return wrapper;
+}
+
+function openProject(projectId) {
+  const project = projectMap.get(projectId);
+  if (!project || !dialog || !dialogContent) return;
+
+  dialogLabel.textContent = project.label;
+  dialogTitle.textContent = project.title;
+  dialogSummary.textContent = project.summary;
+  dialogDownload.href = project.doc;
+  dialogContent.replaceChildren();
+
+  project.blocks.forEach((block) => {
+    const element =
+      block.type === "table" ? createTableBlock(block) : createTextBlock(block);
+    dialogContent.appendChild(element);
+  });
+
+  if (typeof dialog.showModal === "function") {
+    dialog.showModal();
+  } else {
+    dialog.setAttribute("open", "");
+  }
+}
+
+function closeProject() {
+  if (!dialog) return;
+  if (typeof dialog.close === "function") {
+    dialog.close();
+  } else {
+    dialog.removeAttribute("open");
+  }
+}
+
+document.querySelectorAll(".detail-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    openProject(button.dataset.projectId);
+  });
+});
+
+document.querySelectorAll(".project-card[data-project-id]").forEach((card) => {
+  card.addEventListener("click", (event) => {
+    if (event.target.closest("a, button")) return;
+    openProject(card.dataset.projectId);
+  });
+});
+
+if (dialog) {
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) closeProject();
+  });
+}
+
+if (dialogClose) {
+  dialogClose.addEventListener("click", closeProject);
+}
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeProject();
+});
