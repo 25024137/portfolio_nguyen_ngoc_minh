@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài tập 2 - Bài 3: Viết prompt hiệu quả cho các tác vụ học tập</title>
+    <style>
+body{margin:0;font-family:Arial,sans-serif;background:#eef9fc;color:#173746}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 60px}
+.topbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.back,.download{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:999px;text-decoration:none;font-weight:700}
+.back{background:#ffffff;color:#176d8d;border:1px solid rgba(23,109,141,.18)}
+.download{background:#176d8d;color:#fff}
+.hero{background:#fff;border:1px solid rgba(23,109,141,.12);border-radius:20px;padding:28px;box-shadow:0 20px 60px rgba(30,98,128,.12)}
+.eyebrow{margin:0 0 10px;color:#2287ab;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+h1{margin:0;color:#12384a;font-size:36px;line-height:1.08}
+.content{margin-top:22px;background:#fff;border:1px solid rgba(23,109,141,.12);border-radius:20px;padding:28px;box-shadow:0 20px 60px rgba(30,98,128,.12)}
+.content h2{margin:26px 0 10px;color:#12384a;font-size:22px;line-height:1.3}
+.content h2:first-child{margin-top:0}
+.content p{margin:0 0 14px;line-height:1.72;color:#31505d}
+.table-wrap{overflow:auto;margin:22px 0;border:1px solid rgba(18,56,74,.12);border-radius:14px}
+table{width:100%;min-width:780px;border-collapse:collapse;background:#fff}
+th,td{padding:12px 14px;border-bottom:1px solid rgba(18,56,74,.1);text-align:left;vertical-align:top;font-size:13px;line-height:1.55}
+th{background:#e7f7fb;color:#12384a}
+@media (max-width:760px){h1{font-size:28px}.wrap{padding:20px 14px 40px}.hero,.content{padding:20px}}
+</style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="back" href="../index.html#projects">Quay lại portfolio</a>
+        <a class="download" href="../docs/bai-tap-ca-nhan-3.docx" download>Tải file Word</a>
+      </div>
+      <section class="hero">
+        <p class="eyebrow">Nhiệm vụ 3</p>
+        <h1>Bài tập 2 - Bài 3: Viết prompt hiệu quả cho các tác vụ học tập</h1>
+      </section>
+      <section class="content">
+        <h2>1. Chọn 3 tác vụ học tập phổ biến:</h2>
+<p>a) - Tóm tắt bài đọc/tài liệu học thuật: Phân tích giá trị suy biến - Singular Value Decomposition</p>
+<p>- Prompt cơ bản (đơn giản, ngắn gọn)</p>
+<p>- Prompt cải tiến (chi tiết hơn, có cấu trúc)</p>
+<p>- Prompt nâng cao (áp dụng các kỹ thuật prompt engineering như role prompting, chain-of-thought, few-shot examples)</p>
+<p>So sánh kết quả :</p>
+<p>Phân tích cụ thể từng prompt</p>
+<p>Prompt 1: “Tóm tắt về Singular Value Decomposition (SVD)”</p>
+<p>Prompt này ít chi tiết ở các phần sau:</p>
+<p>1. Không nói cần cấu trúc thế nào. AI có thể viết theo bất kỳ kiểu nào: đoạn văn, gạch đầu dòng, bài dài, bài ngắn.</p>
+<p>2. Không nói đối tượng người đọc là ai. Nếu người đọc là sinh viên năm nhất thì cần giải thích đơn giản. Nếu là người đã học đại số tuyến tính thì có thể dùng thuật ngữ khó hơn. Prompt 1 không chỉ rõ điều đó.</p>
+<p>3. Không nói cần công thức nào. Dù SVD thường có công thức, prompt không bắt buộc AI phải trình bày công thức này.</p>
+<p>4. Không yêu cầu ví dụ hay ứng dụng. AI có thể chỉ định nghĩa ngắn gọn mà không nói SVD dùng để làm gì.</p>
+<p>=&gt; Vì vậy Prompt 1 chỉ phù hợp khi bạn muốn câu trả lời nhanh, tổng quát.</p>
+<p>Prompt 2: “Tóm tắt các ý chính… 3 phần: Định nghĩa, Công thức toán học và Ứng dụng thực tế”</p>
+<p>Prompt này chi tiết hơn Prompt 1 ở các phần:</p>
+<h2>1. Có cấu trúc rõ ràng. Bạn yêu cầu đúng 3 phần:</h2>
+<p>Định nghĩa</p>
+<p>Công thức toán học</p>
+<p>Ứng dụng thực tế</p>
+<p>Điều này giúp câu trả lời dễ đọc hơn và ít bị thiếu ý.</p>
+<h2>2. Có định hướng nội dung cần xuất hiện. AI biết chắc phải nói về:</h2>
+<p>SVD là gì,</p>
+<p>công thức liên quan,</p>
+<p>dùng vào đâu trong thực tế.</p>
+<p>3. Nhưng vẫn chưa chi tiết ở phần đối tượng người học. Prompt không nói bài này dành cho sinh viên năm nhất, học sinh phổ thông hay người đã biết đại số tuyến tính.</p>
+<p>4. Chưa quy định số lượng ứng dụng. Bạn chỉ nói “ứng dụng thực tế”, nên AI có thể nêu 2, 3 hoặc 5 ứng dụng.</p>
+<p>5. Chưa yêu cầu giải thích từng ma trận. Có phần “công thức toán học”, nhưng không bắt buộc phải giải thích rõ</p>
+<p>=&gt; Prompt 2 tốt hơn Prompt 1 vì có bố cục, nhưng vẫn còn khá mở.</p>
+<p>Prompt 3: “Đóng vai giáo sư Toán… sinh viên năm nhất… Bước 1, 2, 3…”</p>
+<p>Prompt này chi tiết nhất ở các phần:</p>
+<p>1. Có vai trò cụ thể. Bạn yêu cầu AI “đóng vai giáo sư Toán học”. Vì vậy câu trả lời sẽ có phong cách giảng dạy, chậm rãi, giải thích rõ.</p>
+<p>2. Có đối tượng người nghe cụ thể. “Sinh viên năm nhất” là chi tiết rất quan trọng. Nó khiến AI tránh giải thích quá khó và phải dùng ngôn ngữ dễ hiểu hơn.</p>
+<h2>3. Có quy trình trả lời theo từng bước. Bạn không chỉ nói “giải thích SVD”, mà chia thành:</h2>
+<p>Bước 1: công thức và ý nghĩa từng ma trận</p>
+<p>Bước 2: 2 ứng dụng thực tế</p>
+<p>Bước 3: ẩn dụ đời sống</p>
+<h2>4. Có yêu cầu cụ thể về công thức. Bạn nêu rõ công thức:</h2>
+<p>A=UΣVTA = U\Sigma V^TA=UΣVT</p>
+<p>Nên AI gần như chắc chắn sẽ dùng đúng công thức này.</p>
+<p>5. Có yêu cầu giải thích từng thành phần. Prompt bắt AI phải giải thích từng kí hiệu trong công thứ</p>
+<p>Đây là phần Prompt 1 và Prompt 2 chưa làm rõ.</p>
+<p>6. Có số lượng ứng dụng cụ thể. Bạn yêu cầu “2 ứng dụng thực tế”, nên câu trả lời sẽ vừa đủ, không quá ít cũng không lan man.</p>
+<p>7. Có yêu cầu ẩn dụ. Đây là điểm làm prompt rất mạnh, vì nó ép câu trả lời phải dễ nhớ và gần gũi hơn.</p>
+<p>=&gt; Prompt 3 chi tiết nhất vì nó kiểm soát cả vai trò, đối tượng, nội dung, số lượng ví dụ, công thức và phong cách giải thích.</p>
+<p>b) Giải thích khái niệm phức tạp Chủ đề: Lập trình Hướng đối tượng</p>
+<p>- Prompt cơ bản (đơn giản, ngắn gọn)</p>
+<p>- Prompt cải tiến (chi tiết hơn, có cấu trúc)</p>
+<p>- Prompt nâng cao (áp dụng các kỹ thuật prompt engineering như role prompting, chain-of-thought, few-shot examples)</p>
+<p>Phân tích từng prompt</p>
+<p>Prompt 1</p>
+<p>“Giải thích tính đa hình trong lập trình”</p>
+<p>Ít chi tiết vì:</p>
+<p>không nói dùng ngôn ngữ nào,</p>
+<p>không nói đang nói về OOP,</p>
+<p>không yêu cầu code,</p>
+<p>không nói giải thích cho ai.</p>
+<p>=&gt; AI sẽ trả lời khá chung chung.</p>
+<p>Prompt 2</p>
+<p>“Giải thích Polymorphism trong OOP Python bằng ví dụ code”</p>
+<p>Chi tiết hơn vì:</p>
+<p>xác định rõ Python,</p>
+<p>xác định rõ OOP,</p>
+<p>yêu cầu ví dụ code.</p>
+<p>Nhưng vẫn thiếu:</p>
+<p>chuẩn code,</p>
+<p>kỹ thuật cụ thể,</p>
+<p>giải thích từng dòng.</p>
+<p>Prompt 3</p>
+<p>“Đóng vai Python Senior hướng dẫn thực tập sinh…”</p>
+<p>Chi tiết nhất vì:</p>
+<p>có vai trò cụ thể (Senior),</p>
+<p>có đối tượng học (intern),</p>
+<p>yêu cầu method overriding,</p>
+<p>yêu cầu chuẩn PEP 8,</p>
+<p>yêu cầu giải thích từng dòng code.</p>
+<p>=&gt; AI sẽ cho output sát nhu cầu học tập và chuyên nghiệp hơn nhiều.</p>
+<p>- Tạo bộ câu hỏi ôn tập cho chủ đề Chủ đề: Tích phân suy rộng</p>
+<p>- Prompt cơ bản (đơn giản, ngắn gọn)</p>
+<p>- Prompt cải tiến (chi tiết hơn, có cấu trúc)</p>
+<p>- Prompt nâng cao (áp dụng các kỹ thuật prompt engineering như role prompting, chain-of-thought, few-shot examples)</p>
+<p>Phân tích từng prompt</p>
+<p>Prompt 1</p>
+<p>Ít chi tiết vì:</p>
+<p>không nói số lượng bài,</p>
+<p>không có mức độ khó,</p>
+<p>không yêu cầu đáp án.</p>
+<p>=&gt; AI sẽ tạo bài khá ngẫu nhiên.</p>
+<p>Prompt 2</p>
+<p>Chi tiết hơn vì:</p>
+<p>có 3 câu tự luận,</p>
+<p>có đáp án chi tiết.</p>
+<p>Nhưng vẫn thiếu:</p>
+<p>phân loại độ khó,</p>
+<p>mục tiêu kiểm tra cụ thể.</p>
+<p>Prompt 3</p>
+<p>Chi tiết nhất vì:</p>
+<p>có vai trò giảng viên,</p>
+<p>có mức độ khó tăng dần,</p>
+<p>có yêu cầu phân loại sinh viên,</p>
+<p>có lời giải từng bước rõ ràng.</p>
+<p>=&gt; Cho ra sát đề thi thật hơn nhiều.</p>
+<p>. Tổng hợp các nguyên tắc và mẹo viết prompt hiệu quả dựa trên kết quả thử nghiệm.</p>
+<p>Nguyên tắc viết prompt hiệu quả rút ra từ cả 3 chủ đề</p>
+<p>SVD – Polymorphism – Tích phân suy rộng</p>
+<p>Qua 3 lần thử prompt, có thể thấy prompt càng tốt thì càng kiểm soát rõ ai trả lời, trả lời cho ai, trả lời theo cấu trúc nào và cần chi tiết đến đâu.</p>
+<h2>1. Nêu rõ vai trò của AI</h2>
+<p>Prompt tốt nên nói AI đang đóng vai gì.</p>
+<p>Ví dụ:</p>
+<p>“Đóng vai giáo sư Toán học…”</p>
+<p>“Đóng vai Python Senior…”</p>
+<p>“Đóng vai giảng viên Giải tích…”</p>
+<p>Tác dụng: câu trả lời sẽ có đúng phong cách hơn, ví dụ giáo sư thì giải thích học thuật, Python Senior thì chú trọng code chuẩn và thực tế.</p>
+<h2>2. Xác định rõ người học là ai</h2>
+<p>Nên nói rõ đối tượng tiếp nhận.</p>
+<p>Ví dụ:</p>
+<p>sinh viên năm nhất,</p>
+<p>thực tập sinh,</p>
+<p>sinh viên cần tự chấm điểm.</p>
+<p>Tác dụng: AI biết nên giải thích đơn giản hay chuyên sâu, dùng ví dụ dễ hiểu hay thuật ngữ nâng cao.</p>
+<h2>3. Chia cấu trúc đầu ra rõ ràng</h2>
+<p>Prompt tốt thường yêu cầu trả lời theo phần hoặc theo bước.</p>
+<p>Ví dụ:</p>
+<p>“Bước 1, Bước 2, Bước 3”</p>
+<p>“Định nghĩa, Công thức, Ứng dụng”</p>
+<p>“Câu 1 dễ, Câu 2 trung bình, Câu 3 khó”</p>
+<p>Tác dụng: câu trả lời ít bị lan man, dễ đọc và dễ copy vào bài làm/báo cáo.</p>
+<h2>4. Ghi rõ nội dung bắt buộc phải có</h2>
+<p>Không nên chỉ nói “giải thích” hoặc “tạo bài tập”, mà nên chỉ rõ cần những gì.</p>
+<p>Ví dụ:</p>
+<p>Với SVD: phải có công thức</p>
+<p>Với OOP: phải có code Python, method overriding, class cha và class con.</p>
+<p>Với tích phân: phải có 3 câu, lời giải chi tiết, mức độ khó tăng dần.</p>
+<p>Tác dụng: AI ít bỏ sót ý quan trọng.</p>
+<h2>5. Quy định mức độ chi tiết</h2>
+<p>Nên nói rõ muốn ngắn hay dài, cơ bản hay chuyên sâu.</p>
+<p>Ví dụ:</p>
+<p>“Định nghĩa dưới 3 câu”</p>
+<p>“Giải thích từng dòng code”</p>
+<p>“Trình bày lời giải step-by-step”</p>
+<p>Tác dụng: tránh việc câu trả lời quá ngắn, quá dài hoặc không đúng nhu cầu.</p>
+<h2>6. Chỉ rõ định dạng mong muốn</h2>
+<p>Nên yêu cầu định dạng cụ thể.</p>
+<p>Ví dụ:</p>
+<p>bảng so sánh,</p>
+<p>bullet points,</p>
+<p>code block,</p>
+<p>lời giải từng bước,</p>
+<p>đề thi có đáp án ở cuối.</p>
+<p>Tác dụng: kết quả gọn, dễ nhìn, dễ dùng lại trong Word hoặc bài thuyết trình.</p>
+<p>Công thức prompt hiệu quả</p>
+<p>Một prompt tốt có thể viết theo công thức:</p>
+<p>Vai trò + Đối tượng + Nhiệm vụ + Cấu trúc + Yêu cầu cụ thể</p>
+<div class='table-wrap'><table><tr><th>Tiêu chí</th><th>Prompt 1: “Tóm tắt về SVD”</th><th>Prompt 2: “Tóm tắt ý chính, 3 phần…”</th><th>Prompt 3: “Đóng vai giáo sư…”</th></tr><tr><td>Vai trò người trả lời</td><td>Không</td><td>Không</td><td>Có: “giáo sư Toán học”</td></tr><tr><td>Đối tượng người đọc</td><td>Không</td><td>Không rõ</td><td>Có: “sinh viên năm nhất”</td></tr><tr><td>Mục tiêu trả lời</td><td>Chỉ yêu cầu tóm tắt</td><td>Tóm tắt ý chính</td><td>Giải thích để người mới dễ hiểu</td></tr><tr><td>Cấu trúc bài</td><td>Không quy định</td><td>Có 3 phần rõ ràng</td><td>Có 3 bước cụ thể</td></tr><tr><td>Công thức cần có</td><td>Không nói rõ</td><td>Có yêu cầu phần công thức</td><td>Chỉ rõ công thức A</td></tr><tr><td>Giải thích từng thành phần</td><td>Không yêu cầu</td><td>Có thể có nhưng chắc buộc rõ</td><td>Bắt buộc giải thích</td></tr><tr><td>Ứng dụng thực tế</td><td>Không yêu cầu cụ thể</td><td>Có phần ứng dụng</td><td></td></tr><tr><td>Ví dụ ứng dụng</td><td>Không</td><td>Không chỉ rõ số lượng</td><td>Gợi ý rõ: nén ảnh, hệ thống gợi ý</td></tr><tr><td>Phong cách diễn đạt</td><td>Không định hướng</td><td>Trung tính,học thuật</td><td>Dễ hiểu, giảng dạy cho năm nhất</td></tr><tr><td>Ẩn dụ đời sống</td><td>Không</td><td>Không</td><td>Bắt buộc có ẩn dụ dễ nhớ</td></tr></table></div>
+<div class='table-wrap'><table><tr><th>Tiêu chí</th><th>Prompt 1: “Giải thích tính đa hình trong lập trình”</th><th>Prompt 2: “Giải thích Polymorphism trong OOP Python, có ví dụ code”</th><th>Prompt 3: “Đóng vai Python Senior hướng dẫn thực tập sinh…”</th></tr><tr><td>Mức độ chi tiết</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr><tr><td>Vai trò người trả lời</td><td>Không</td><td>Không</td><td>Có: lập trình viên Python Senior</td></tr><tr><td>Đối tượng người đọc</td><td>Khong rõ</td><td>Người học Python/OOP nói chung</td><td>Có: thực tập sinh</td></tr><tr><td>Chủ đề chính</td><td>Tính đa hình nói chung</td><td>Polymorphism trong OOP Python</td><td>Polymorphism trong OOP Python</td></tr><tr><td>Phạm vi kiến thức</td><td>Rộng,chung chung</td><td>Cụ thể hơn :OOP + Python</td><td>Rất cụ thể: OOP Python + method overriding</td></tr><tr><td>Yêu cầu code</td><td>Không bắt buộc</td><td>Có ví dụ code ngắn gọn</td><td>Có code minh họa rõ ràng</td></tr><tr><td>Yêu cầu kĩ thuật cụ thể</td><td>Không có</td><td>Chưa chỉ rõ kĩ thuật</td><td>Có: method overriding, class cha, 2 class con</td></tr><tr><td>Yêu cầu giải thích code</td><td>Không có</td><td>Có thể có nhưng không bắt buộc chi tiết</td><td></td></tr><tr><td>Khả năng kiểm soát đầu ra</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr><tr><td>Phù hợp để học sâu</td><td>Thấp</td><td>Khá tốt</td><td>Tốt nhất</td></tr></table></div>
+<div class='table-wrap'><table><tr><th>Tiêu chí</th><th>Prompt 1: “Tạo bài tập về tích phân suy rộng”</th><th>Prompt 2: “Tạo bài kiểm tra 3 câu có đáp án”</th><th>Prompt 3: “Đóng vai giảng viên chuẩn bị đề giữa kỳ…”</th></tr><tr><td>Mức độ chi tiết</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr><tr><td>Vai trò người ra đề</td><td>Không</td><td>Không</td><td>Có : giảng viên giải tích</td></tr><tr><td>Số lượng câu hỏi</td><td>Không rõ</td><td>Có 3 câu</td><td>Có : 3 câu</td></tr><tr><td>Mức độ khó</td><td>Không yêu cầu</td><td>Chưa phân mức</td><td>Có từ dễ đến khó</td></tr><tr><td>Dạng bài</td><td>Chung chung</td><td>Tự luận</td><td>Tự luận phân loại</td></tr><tr><td>Yêu cầu đáp án</td><td>Không</td><td>Có đáp án chi tiết</td><td>Có lời giải chi tiết từng bước</td></tr><tr><td>Mục tiêu kiểm tra</td><td>Không rõ</td><td>Kiểm tra kiến thức cơ bản</td><td>Phân loại sinh viên</td></tr><tr><td>Khả năng kiểm soát output</td><td>Thấp</td><td>Trung bình</td><td>Cao</td></tr></table></div>
+      </section>
+    </div>
+  </body>
+</html>
